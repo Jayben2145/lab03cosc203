@@ -44,6 +44,7 @@ a {
 
 body {
     background: #003049;
+    display: grid;
  }
 header {
     background: #780000;
@@ -51,21 +52,32 @@ header {
     height: 100px;
     width: auto;
     padding: 0px;
+    grid-row-start: 1;
+    grid-row: span 3;
 
  }
 nav {
     height: 100px;
     background: #C1121F ;
     position: relative;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column: span 2;
  }
 main { 
     background: #FDF0D5 ;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 footer {
     background: #C1121F ;
     text-align: center;
     padding: 0.25%;
     height:50px;
+    grid-row-start: 3;
+    grid-row: span 3;
  }
 
 .number1{
@@ -153,30 +165,7 @@ figcaption{
     text-align: center;
 }
 
-.flex-container {
-    display: flex;
-    gap: 200px;
-}
-.gap{
 
-    gap: 10px;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-
-div {
-    color: #007AFF;
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: Arial, sans-serif;
-    background: white;
-    padding: 15px;
-    border: 2px solid #007AFF;
-    border-radius: 5px;
-}
 
 
 main{
@@ -213,6 +202,31 @@ article{
 
 }
 
+.flex-container {
+    display: flex;
+    gap: 200px;
+}
+.gap{
+
+    gap: 10px;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+
+div {
+    color: #007AFF;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 15px;
+    border: 2px solid #007AFF;
+    border-radius: 5px;
+}
+
 .flex-row {
     flex-direction: row;
     align-items: stretch;
@@ -224,6 +238,7 @@ article{
     margin-left: 10%;
     margin-right: 10%;
 }
+
 
 blockquote {
     margin: 0;
@@ -246,45 +261,8 @@ blockquote p::after {
 .grid-container {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
 
 
-
-.a{
-    grid-row: span 3;
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
-
-.d{
-    grid-row-start: 5;
-    grid-row: span 3;
-
-}
-
-.b{
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column: span 2;
-}
-
-.c{
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-column: span 2;
-    grid-row: span 2;
-
-}
-
-.grid-container > * {
-    color: #007AFF;
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: Arial, sans-serif;
-    background: #007AFF55;
-    padding: 15px;
-    border: 2px solid #007AFF;
-    border-radius: 5px;
-}
